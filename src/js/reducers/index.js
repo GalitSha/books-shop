@@ -105,3 +105,16 @@ export const rootReducer = (state = initialState, action) => {
   }
 };
 
+
+
+
+
+function onlyCharacters (str) {
+  let  charactersArr = str.split(" ");
+
+
+  console.log(charactersArr);
+}
+
+
+.filter(char => char.length === 1 && char.match(/[A-Z|a-z]/i));

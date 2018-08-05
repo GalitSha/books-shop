@@ -7,8 +7,9 @@ import {
 } from 'react-router-dom';
 import CurrentBook from './CurrentBook';
 import BooksList from "./BooksList";
-import ChangeDetails from "./ChangeDetails";
 import {Switch} from 'react-router-dom'
+import {Home} from "./Home";
+import {DeleteMessage} from "./DeleteMessage";
 
 export class App extends Component {
 
@@ -21,8 +22,9 @@ export class App extends Component {
             <div className="page-container">
               <BooksList/>
               <Switch>
+                <Route path="/" exact={true} component={Home}/>
                 <Route path="/book/:bookId" component={CurrentBook}/>
-                {/*<Route path="/book/change-details" component={ChangeDetails}/>*/}
+                <Route path="/delete"  component={DeleteMessage}/>
               </Switch>
             </div>
           </Router>

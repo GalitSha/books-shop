@@ -20,7 +20,7 @@ class CurrentBook extends Component {
   deleteBook = () => {
     const bookId = parseInt(this.props.match.params.bookId,0);
     this.props.deleteBook(bookId);
-    this.props.history.push('/')
+    this.props.history.push('/delete')
   };
 
   render() {

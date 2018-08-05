@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 
 
-export class Home extends Component {
+export class DeleteMessage extends Component {
 
   render(){
     return(
       <div>
-      <h1>WELCOME TO BOOKS SHOP</h1>
+        <h1>Book was successfully deleted</h1>
       </div>
     )
   }
 }
-
