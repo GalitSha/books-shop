@@ -1,0 +1,62 @@
+.main-title{
+  background: #337ab7;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+
+}
+.page-container {
+  display: grid;
+  grid-template-areas:"vertical-menu book-details";
+  grid-template-columns: 100px 900px;
+}
+
+.vertical-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  grid-area: vertical-menu;
+  width: max-content;
+
+}
+
+.vertical-menu li {
+  background-color: #182b4a;
+  color: white;
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+
+
+.vertical-menu li:hover {
+  background-color: #1e4e73;
+  cursor: pointer;
+  color: white;
+}
+
+/*#menu-title {*/
+  /*background-color: #4CAF50; !* Add a green color to the "active/current" link *!*/
+  /*color: white;*/
+/*}*/
+
+
+.book-details {
+ grid-area: book-details;
+}
+
+.book-img {
+  width: 110%;
+  height: 200px;
+}
+
+.link {
+  color: white;
+}
+
+
+.modal {
+  /*background: rgba(0, 0, 0, 0.55);*/
+}
