@@ -10,18 +10,13 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-   showModal: value => dispatch(showModal(value)),
-  deleteBook: id => dispatch(deleteBook(id))
+   showModal: value => dispatch(showModal(value))
 });
 
 
 class CurrentBook extends Component {
+  
 
-  deleteBook = () => {
-    const bookId = parseInt(this.props.match.params.bookId,0);
-    this.props.deleteBook(bookId);
-    this.props.history.push('/delete')
-  };
 
   render() {
     const bookId = parseInt(this.props.match.params.bookId,0);

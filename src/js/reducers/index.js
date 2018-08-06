@@ -96,7 +96,7 @@ export const rootReducer = (state = initialState, action) => {
       return {...state, books: newBooks};
 
     case DELETE_BOOK:
-      let newBooks2 = state.books.filter(book => book.id !== action.id )
+      let newBooks2 = state.books.filter(book => book.id !== action.id)
       return {...state, books: newBooks2};
 
 
@@ -108,13 +108,3 @@ export const rootReducer = (state = initialState, action) => {
 
 
 
-
-function onlyCharacters (str) {
-  let  charactersArr = str.split(" ");
-
-
-  console.log(charactersArr);
-}
-
-
-.filter(char => char.length === 1 && char.match(/[A-Z|a-z]/i));
