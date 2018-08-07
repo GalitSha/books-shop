@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import {showModal, deleteBook} from "../actions";
+import {showModal,  changeDeleteState} from "../actions";
 import ChangeDetails from "./ChangeDetails";
+import DeleteBook from "./DeleteBook";
+
 
 
 const mapStateToProps = state => {
-  return {books: state.books, showDetailsModal: state.showDetailsModal}
+  return {books: state.books, showDetailsModal: state.showDetailsModal,
+    deleteCurrentBook: state.deleteCurrentBook}
 };
 
 const mapDispatchToProps = dispatch => ({
-   showModal: value => dispatch(showModal(value))
+   showModal: value => dispatch(showModal(value)),
+   changeDeleteState: (value) => dispatch(changeDeleteState(value))
 });
 
 
 class CurrentBook extends Component {
-  
-
 
   render() {
     const bookId = parseInt(this.props.match.params.bookId,0);
@@ -44,7 +46,8 @@ class CurrentBook extends Component {
           <Button bsStyle="primary" onClick={() => this.props.showModal(true)}>Edit</Button>
         </div>
         <ChangeDetails show={this.props.showDetailsModal} bookId={bookId}/>
-        <Button bsStyle="primary" onClick={this.deleteBook}>Delete Book</Button>
+        <Button bsStyle="primary" onClick={() => this.props.changeDeleteState(true)}>Delete Book</Button>
+        <DeleteBook bookId={bookId} show={this.props.deleteCurrentBook}/>
       </div>
     )
   }

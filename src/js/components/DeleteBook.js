@@ -1,12 +1,16 @@
 import {Component} from "react";
 import {Button, Modal} from 'react-bootstrap';
-import {deleteBook} from "../actions";
+import {changeDeleteState, deleteBook} from "../actions";
 import {connect} from "react-redux";
+import React from "react";
+import {Route , withRouter} from 'react-router-dom';
 
 
 
-const mapDispatchToProps = dispatch => ({
-  deleteBook: id => dispatch(deleteBook(id))
+
+ const mapDispatchToProps = dispatch => ({
+  deleteBook: id => dispatch(deleteBook(id)),
+   changeDeleteState: value => dispatch(changeDeleteState(value))
 });
 
 
@@ -14,17 +18,17 @@ const mapDispatchToProps = dispatch => ({
 
 class DeleteBook extends Component {
 
-  deleteBook = () => {
-    const bookId = parseInt(this.props.match.params.bookId,0);
-    this.props.deleteBook(bookId);
-    this.props.history.push('/delete')
+  onApprovalDelete = () => {
+    this.props.deleteBook(this.props.bookId);
+    this.props.changeDeleteState(false);
+    this.props.history.push('/delete');
   };
 
   render() {
     return (
 
       <div>
-        <Modal show={} animation={false}>
+        <Modal show={this.props.show} animation={false}>
 
           <Modal.Header>
             <Modal.Title>Warning</Modal.Title>
@@ -35,8 +39,8 @@ class DeleteBook extends Component {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button onClick={}>cancel</Button>
-            <Button bsStyle="primary" onClick={this.deleteBook}>Ok</Button>
+            <Button onClick={() => this.props.changeDeleteState(false)}>cancel</Button>
+            <Button bsStyle="primary" onClick={this.onApprovalDelete}>Delete</Button>
           </Modal.Footer>
 
         </Modal>
@@ -48,4 +52,4 @@ class DeleteBook extends Component {
 }
 
 
-export connect(null, mapDispatchToProps)(DeleteBook);
+export default withRouter(connect(null, mapDispatchToProps)(DeleteBook));

@@ -16,8 +16,9 @@ class BooksList extends Component {
     return (
       <div>
         <ul className="vertical-menu">
+          <li className="home">Home</li>
           <li id="menu-title">Books List</li>
-          {this.props.books.map((book) => <li key={book.id}> <Link to={'/book/' + book.id} className="link">{book.title}</Link></li>
+          {this.props.books.map((book) => <li key={book.id}> <Link to={'/book/' + book.id} className="link">{book.volumeInfo.title}</Link></li>
           )}
         </ul>
       </div>

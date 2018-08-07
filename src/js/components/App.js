@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../../css/App.css';
-
 import {
   BrowserRouter as Router,
   Route,
@@ -10,13 +9,49 @@ import BooksList from "./BooksList";
 import {Switch} from 'react-router-dom'
 import {Home} from "./Home";
 import {DeleteMessage} from "./DeleteMessage";
+import {changeDeleteState, fetchBooks, showModal} from "../actions";
+import {connect} from "react-redux";
+
+
+const mapStateToProps = state => {
+  return {books: state.books}
+};
+
+const mapDispatchToProps = dispatch => ({
+  fetchBooks: data => dispatch(fetchBooks(data))
+
+});
+
 
 export class App extends Component {
 
+  getGoogleBooks = () => {
+    fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc')
+      .then(
+        (response) => {
+          if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+              response.status);
+            return;
+          }
+
+          response.json().then(data => {
+            console.log(data.items);
+            this.props.fetchBooks(data.items);
+
+          });
+        }
+      )
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+      });
+  };
+
   render() {
+    this.getGoogleBooks();
     return (
       <div>
-        <h2 className="main-title"> Books Shop </h2>
+        <h2 className="main-title"> Google Books</h2>
         <div>
           <Router>
             <div className="page-container">
@@ -24,7 +59,7 @@ export class App extends Component {
               <Switch>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path="/book/:bookId" component={CurrentBook}/>
-                <Route path="/delete"  component={DeleteMessage}/>
+                <Route path="/delete" component={DeleteMessage} />
               </Switch>
             </div>
           </Router>
@@ -35,4 +70,4 @@ export class App extends Component {
 }
 
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
