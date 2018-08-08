@@ -3,20 +3,19 @@ body {
 }
 
 
-
-
 .main-title{
   background: #337ab7;
   color: white;
   text-align: center;
   padding: 10px;
   width: 100%;
+  margin: 0;
 
 }
 .page-container {
   display: grid;
   grid-template-areas:"vertical-menu book-details";
-  grid-template-columns: 100px 900px;
+  grid-template-columns: 400px 900px;
 
 }
 
@@ -26,17 +25,21 @@ body {
   list-style-type: none;
   grid-area: vertical-menu;
   width: max-content;
+  border-right: #d6d6d6 thin;
 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
 }
 
 .vertical-menu li {
-  background-color: #182b4a;
+  /*background-color: #182b4a;*/
   color: white;
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
 }
-
 
 
 .vertical-menu li:hover {
@@ -45,23 +48,31 @@ body {
   color: white;
 }
 
-/*#menu-title {*/
-  /*background-color: #4CAF50; !* Add a green color to the "active/current" link *!*/
-  /*color: white;*/
-/*}*/
-
-
-.book-details {
- grid-area: book-details;
-}
-
-.book-img {
-  width: 110%;
-  height: 200px;
-}
-
-.link {
+#menu-title {
+  background-color: #182b4a;
   color: white;
 }
 
 
+.book-details {
+ grid-area: book-details;
+
+}
+
+
+
+.link {
+
+  /*background-color: white;*/
+  color: #182b4a;
+
+}
+
+.home{
+  text-align: end;
+
+}
+
+.welcome{
+  font-size: 12px;
+}

@@ -21,7 +21,8 @@ const mapDispatchToProps = dispatch => ({
 class CurrentBook extends Component {
 
   render() {
-    const bookId = parseInt(this.props.match.params.bookId,0);
+    console.log(this.props.match.params.bookId);
+    const bookId = this.props.match.params.bookId;
     const bookDetails = this.props.books.find(book => {
       return book.id === bookId
     });
@@ -30,18 +31,18 @@ class CurrentBook extends Component {
     return (
       <div className='book-details'>
         <div>
-          <img className="book-img" src={bookDetails.url} alt="book"/>
+          {/*<img className="book-img" src={bookDetails.url} alt="book"/>*/}
           <div className="book-title">
-             {bookDetails.title}
+            {bookDetails.volumeInfo.title}
           </div>
           <div className="book-id">
             id: {bookId}
           </div>
           <div className="book-author">
-            Author Name: {bookDetails.authorName}
+            Author Name: {bookDetails.volumeInfo.authors}
           </div>
           <div className="book-date">
-            Publish Date: {bookDetails.publishDate}
+            Publish Date: {bookDetails.volumeInfo.publishedDate}
           </div>
           <Button bsStyle="primary" onClick={() => this.props.showModal(true)}>Edit</Button>
         </div>

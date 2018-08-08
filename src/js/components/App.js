@@ -11,6 +11,7 @@ import {Home} from "./Home";
 import {DeleteMessage} from "./DeleteMessage";
 import {changeDeleteState, fetchBooks, showModal} from "../actions";
 import {connect} from "react-redux";
+import {googleApi} from "./googleApi";
 
 
 const mapStateToProps = state => {
@@ -25,26 +26,18 @@ const mapDispatchToProps = dispatch => ({
 
 export class App extends Component {
 
-  getGoogleBooks = () => {
-    fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc')
-      .then(
-        (response) => {
-          if (response.status !== 200) {
-            console.log('Looks like there was a problem. Status Code: ' +
-              response.status);
-            return;
-          }
+  getGoogleBooks =  () => {
+    let response = googleApi;
+      // await fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc');
+    // if (response.status !== 200) {
+    //   console.log('Looks like there was a problem. Status Code: ' +
+    //     response.status);
+    //   return;
+    // }
 
-          response.json().then(data => {
-            console.log(data.items);
-            this.props.fetchBooks(data.items);
-
-          });
-        }
-      )
-      .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-      });
+    let data = response;
+    console.log(data.items);
+    this.props.fetchBooks(data.items);
   };
 
   render() {
@@ -59,7 +52,7 @@ export class App extends Component {
               <Switch>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path="/book/:bookId" component={CurrentBook}/>
-                <Route path="/delete" component={DeleteMessage} />
+                <Route path="/delete" component={DeleteMessage}/>
               </Switch>
             </div>
           </Router>
