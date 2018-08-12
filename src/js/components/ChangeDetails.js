@@ -87,7 +87,7 @@ class ChangeDetails extends Component {
     return (
 
       <div>
-        <Modal show={this.props.show} animation={false}>
+        <Modal show={this.props.show} animation={false} className="modal">
           <Modal.Header>
             <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>

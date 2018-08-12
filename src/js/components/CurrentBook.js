@@ -22,6 +22,9 @@ class CurrentBook extends Component {
 
 
   render() {
+    if (this.props.books.length === 0){
+      return null;
+    }
     console.log(this.props.match.params.bookId);
     const bookId = this.props.match.params.bookId;
     const bookDetails = this.props.books.find(book => {

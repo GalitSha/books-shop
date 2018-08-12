@@ -26,16 +26,15 @@ const mapDispatchToProps = dispatch => ({
 
 export class App extends Component {
 
-  componentWillMount() {
-      let response = googleApi;
-      // await fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc');
-      // if (response.status !== 200) {
-      //   console.log('Looks like there was a problem. Status Code: ' +
-      //     response.status);
-      //   return;
-      // }
-
-      let data = response;
+  async componentWillMount() {
+      // let response = googleApi;
+      let response = await fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc');
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+      let data = await response.json();
       console.log(data.items);
       this.props.fetchBooks(data.items);
     };

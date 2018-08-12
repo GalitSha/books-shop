@@ -28,7 +28,7 @@ class DeleteBook extends Component {
     return (
 
       <div>
-        <Modal show={this.props.show} animation={false}>
+        <Modal show={this.props.show} animation={false} className="modal">
 
           <Modal.Header>
             <Modal.Title>Warning</Modal.Title>

@@ -108,14 +108,6 @@ body {
     background-color: #F5F5F5;
 }
 
-.home {
-    text-align: end;
-
-}
-
-.welcome {
-    font-size: 12px;
-}
 
 .book-details-container {
     margin: 75px 0;
@@ -193,4 +185,6 @@ body {
 
 }
 
-
+.modal{
+    font-size: 17px;
+}
