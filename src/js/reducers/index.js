@@ -21,8 +21,8 @@ export const rootReducer = (state = initialState, action) => {
     case SUBMIT_CHANGES:
       let newBooks = state.books.map((book) => {
         if (book.id === action.id) {
-          book.authorName = action.authorName;
-          book.publishDate = action.date;
+          book.volumeInfo.authors = [action.authorName];
+          book.volumeInfo.publishedDate = action.date;
         }
         return book;
       });

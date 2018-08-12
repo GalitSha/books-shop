@@ -26,34 +26,38 @@ const mapDispatchToProps = dispatch => ({
 
 export class App extends Component {
 
-  getGoogleBooks =  () => {
-    let response = googleApi;
+  componentWillMount() {
+      let response = googleApi;
       // await fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCSo1LREj_NNz01GMAx-OhxZNpRkZZGaMc');
-    // if (response.status !== 200) {
-    //   console.log('Looks like there was a problem. Status Code: ' +
-    //     response.status);
-    //   return;
-    // }
+      // if (response.status !== 200) {
+      //   console.log('Looks like there was a problem. Status Code: ' +
+      //     response.status);
+      //   return;
+      // }
 
-    let data = response;
-    console.log(data.items);
-    this.props.fetchBooks(data.items);
-  };
+      let data = response;
+      console.log(data.items);
+      this.props.fetchBooks(data.items);
+    };
+
 
   render() {
-    this.getGoogleBooks();
+    // this.getGoogleBooks();
     return (
       <div>
         <h2 className="main-title"> Google Books</h2>
+        <img className="main-img" src="http://acervo.plannetaeducacao.com.br/portal/imagens/artigos/brasileiroslendomenos.jpg"/>
+
         <div>
           <Router>
-            <div className="page-container">
+            <div >
+              <h4 className="small-title">BOOKS</h4>
               <BooksList/>
-              <Switch>
-                <Route path="/" exact={true} component={Home}/>
+              {/*<Switch>*/}
+                {/*<Route path="/" exact={true} component={Home}/>*/}
                 <Route path="/book/:bookId" component={CurrentBook}/>
                 <Route path="/delete" component={DeleteMessage}/>
-              </Switch>
+              {/*</Switch>*/}
             </div>
           </Router>
         </div>

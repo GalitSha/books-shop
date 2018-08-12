@@ -10,63 +10,111 @@ body {
   padding: 10px;
   width: 100%;
   margin: 0;
-
 }
-.page-container {
-  display: grid;
-  grid-template-areas:"vertical-menu book-details";
-  grid-template-columns: 400px 900px;
 
+.main-img{
+  width: 100%;
+  height: 299px;
 }
+
+.small-title {
+  font-weight: 400;
+  margin: 0 0 0 0;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #337ab7;
+  background: #e8e9eb;
+}
+
 
 .vertical-menu {
+  overflow-x: scroll;
   padding: 0;
-  margin: 0;
   list-style-type: none;
-  grid-area: vertical-menu;
-  width: max-content;
   border-right: #d6d6d6 thin;
-
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+  /*background: #e8e9eb;*/
+  width: 94%;
+  margin: 0 auto;
 }
 
 .vertical-menu li {
-  /*background-color: #182b4a;*/
-  color: white;
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
+  width: 200px;
+  display: inline-block;
+  justify-self: center;
+  margin: 0 auto;
+  padding: 10px;
 }
-
 
 .vertical-menu li:hover {
-  background-color: #1e4e73;
   cursor: pointer;
   color: white;
+  background-color: #f4f4f4;
 }
 
-#menu-title {
-  background-color: #182b4a;
+.link-container{
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.link{
+  display: inline-block;
   color: white;
+  padding: 30px 12px 12px 12px;
+  text-decoration: none;
+  margin-bottom: 9px;
+}
+
+.menu-img-book {
+  width: 50px;
+  max-width: 100%;
+  height: 80px;
+  display: block;
+  justify-self: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.link-text{
+  color: #337ab7;
+  overflow: hidden;
+  max-width: 175px;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+/**  STYLE 10 */
+.vertical-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #b8cae5, #abc9ea);
+  box-shadow: inset 0 0 1px 1px #5C6670;
 }
 
 
-.book-details {
- grid-area: book-details;
+.vertical-menu::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(183, 183, 183, 0.3)
+}
 
+.vertical-menu::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(left, #8391A6, #337ab7);
+  height: 30px;
+}
+
+.vertical-menu::-webkit-scrollbar {
+  height: 7px;
+  background-color: #F5F5F5;
 }
 
 
 
-.link {
 
-  /*background-color: white;*/
-  color: #182b4a;
 
-}
+
 
 .home{
   text-align: end;
@@ -75,4 +123,62 @@ body {
 
 .welcome{
   font-size: 12px;
+}
+
+
+
+
+
+
+
+.book-details-container{
+  margin-top: 75px ;
+
+
+}
+
+.book-details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*grid-gap: 28px;*/
+  justify-items: center;
+  width: 65%;
+  margin: 0 auto;
+
+}
+
+.book-img{
+  width: 200px;
+  max-width: 100%;
+  height: 290px;
+  margin-top:30px;
+}
+
+
+.book-details-text{
+  text-align: center;
+  font-size: 15px;
+  color: #337ab7;
+  align-self: center;
+}
+
+.book-title{
+  font-size: 30px;
+  margin: 15px 0 40px 0;
+  text-align: center;
+}
+
+.current-buttons{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  grid-gap: 6px;
+}
+
+
+.delete-message{
+  margin: 30px 0;
+  font-size: 20px;
+  color:red;
 }

@@ -756,4 +756,4 @@ export const  googleApi ={
     }
   }
 ]
-}
+};
