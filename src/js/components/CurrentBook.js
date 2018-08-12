@@ -47,8 +47,8 @@ class CurrentBook extends Component {
             Publish Date: {bookDetails.volumeInfo.publishedDate}
           </div>
             <div className="current-buttons">
-            <Button bsStyle="primary" onClick={() => this.props.showModal(true)}>Edit</Button>
-            <Button bsStyle="primary" onClick={() => this.props.changeDeleteState(true)}>Delete Book</Button>
+            <Button className="current-button" bsStyle="primary" onClick={() => this.props.showModal(true)}>Edit</Button>
+            <Button className="current-button" bsStyle="primary" onClick={() => this.props.changeDeleteState(true)}>Delete Book</Button>
             </div>
             </div>
           <img className="book-img" src={bookDetails.volumeInfo.imageLinks ? bookDetails.volumeInfo.imageLinks.smallThumbnail : "https://thumbs.dreamstime.com/b/wise-owl-reading-book-sitting-pile-books-vector-illustration-white-73345208.jpg"} alt="book"/>

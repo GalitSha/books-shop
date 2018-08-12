@@ -1,79 +1,924 @@
-export const  googleApi ={
+// export const  googleApi ={
+//   kind: "books#volumes",
+//   totalItems: 66,
+//   items: [
+//     {
+//       kind: "books#volume",
+//       id: "GdfVCwAAQBAJ",
+//       etag: "ttrLPTc6M0A",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/GdfVCwAAQBAJ",
+//       volumeInfo: {
+//         title: "The Michigan Murders",
+//         subtitle: "The True Story of the Ypsilanti Ripper’s Reign of Terror",
+//         authors: [
+//           "Edward Keyes"
+//         ],
+//         publisher: "Open Road Media",
+//         publishedDate: "2016-04-19",
+//         description: "Edgar Award Finalist: The terrifying true story of savage murders, a terrorized midwestern town, and the serial killer who could have lived next door In 1967, during the time of peace, free love, and hitchhiking, nineteen-year-old Mary Terese Fleszar was last seen alive walking home to her apartment in Ypsilanti, Michigan. One month later, her naked body—stabbed over thirty times and missing both feet and a forearm—was discovered, partially buried, on an abandoned farm. A year later, the body of twenty-year-old Joan Schell was found, similarly violated. Southeastern Michigan was terrorized by something it had never experienced before: a serial killer. Over the next two years, five more bodies were uncovered around Ann Arbor and Ypsilanti, Michigan. All the victims were tortured and mutilated. All were female students. After multiple failed investigations, a chance sighting finally led to a suspect. On the surface, John Norman Collins was an all-American boy—a fraternity member studying elementary education at Eastern Michigan University. But Collins wasn’t all that he seemed. His female friends described him as aggressive and short tempered. And in August 1970, Collins, the “Ypsilanti Ripper,” was arrested, found guilty, and sentenced to life in prison without chance of parole. Written by the coauthor of The French Connection, The Michigan Murders delivers a harrowing depiction of the savage murders that tormented a small midwestern town.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781504025591"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "1504025598"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: true
+//         },
+//         pageCount: 360,
+//         printType: "BOOK",
+//         categories: [
+//           "True Crime"
+//         ],
+//         averageRating: 2,
+//         ratingsCount: 1,
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: true,
+//         contentVersion: "1.18.17.0.preview.3",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=GdfVCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=GdfVCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=GdfVCwAAQBAJ&pg=PT18&dq=detectives+inauthor:keyes&hl=&cd=1&source=gbs_api",
+//         infoLink: "https://play.google.com/store/books/details?id=GdfVCwAAQBAJ&source=gbs_api",
+//         canonicalVolumeLink: "https://market.android.com/details?id=book-GdfVCwAAQBAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "FOR_SALE",
+//         isEbook: true,
+//         listPrice: {
+//           amount: 68,
+//           currencyCode: "ILS"
+//         },
+//         retailPrice: {
+//           amount: 68,
+//           currencyCode: "ILS"
+//         },
+//         buyLink: "https://play.google.com/store/books/details?id=GdfVCwAAQBAJ&rdid=book-GdfVCwAAQBAJ&rdot=1&source=gbs_api",
+//         offers: [
+//           {
+//             finskyOfferType: 1,
+//             listPrice: {
+//               amountInMicros: 68000000,
+//               currencyCode: "ILS"
+//             },
+//             retailPrice: {
+//               amountInMicros: 68000000,
+//               currencyCode: "ILS"
+//             }
+//           }
+//         ]
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/The_Michigan_Murders-sample-epub.acsm?id=GdfVCwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/The_Michigan_Murders-sample-pdf.acsm?id=GdfVCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=GdfVCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "then rang upstairs to the <b>Detective</b> Bureau. Half of the post&#39;s four <b>detectives</b> were <br> on duty in the two small secondfloor offices, <b>Detective</b> Sergeants Ken Taylor and <br> Ken Kraus. The senior of the two, Taylor, took the call. After listening a few&nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "cs5MDwAAQBAJ",
+//       etag: "6nzCYVTim38",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/cs5MDwAAQBAJ",
+//       volumeInfo: {
+//         title: "The Minds of Billy Milligan",
+//         authors: [
+//           "Daniel Keyes"
+//         ],
+//         publisher: "Hachette UK",
+//         publishedDate: "2018-07-12",
+//         description: "'Fascinating' LA Times '[Keyes] has carried it off brilliantly, bringing not only a fine clarity but a special warmth and empathy' Washington Post Billy Milligan was a man tormented by twenty-four distinct personalities battling for supremacy - a battle that culminated when he awoke in jail, arrested for the kidnap and rape of three women. In a landmark trial, Billy was acquitted of his crimes by reason of insanity caused by multiple personality disorder - the first such court decision in history. Among the twenty-four are: Philip, a petty criminal; Kevin, who dealt drugs; April, whose only ambition was to kill Billy's stepfather; Adalana, the shy, affection-starved lesbian who 'used' Billy's body in the rapes that led to his arrest; David, the eight-year-old 'keeper of the pain'; and the Teacher, the sum of all Billy's alter egos fused into one. In The Minds of Billy Milligan, Daniel Keyes brings to light the most remarkable and harrowing case of multiple personality ever recorded.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781409163916"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "1409163911"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: false
+//         },
+//         pageCount: 432,
+//         printType: "BOOK",
+//         categories: [
+//           "True Crime"
+//         ],
+//         averageRating: 5,
+//         ratingsCount: 3,
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: true,
+//         contentVersion: "1.2.2.0.preview.2",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=cs5MDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=cs5MDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=cs5MDwAAQBAJ&pg=PT22&dq=detectives+inauthor:keyes&hl=&cd=2&source=gbs_api",
+//         infoLink: "https://play.google.com/store/books/details?id=cs5MDwAAQBAJ&source=gbs_api",
+//         canonicalVolumeLink: "https://market.android.com/details?id=book-cs5MDwAAQBAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "FOR_SALE",
+//         isEbook: true,
+//         listPrice: {
+//           amount: 46,
+//           currencyCode: "ILS"
+//         },
+//         retailPrice: {
+//           amount: 46,
+//           currencyCode: "ILS"
+//         },
+//         buyLink: "https://play.google.com/store/books/details?id=cs5MDwAAQBAJ&rdid=book-cs5MDwAAQBAJ&rdot=1&source=gbs_api",
+//         offers: [
+//           {
+//             finskyOfferType: 1,
+//             listPrice: {
+//               amountInMicros: 46000000,
+//               currencyCode: "ILS"
+//             },
+//             retailPrice: {
+//               amountInMicros: 46000000,
+//               currencyCode: "ILS"
+//             }
+//           }
+//         ]
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/The_Minds_of_Billy_Milligan-sample-epub.acsm?id=cs5MDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=cs5MDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "Miller and Bessell drove Polly back to the <b>Detective</b> Bureau to work with the <br> department artist at making a composite drawing. Then Miller asked Polly to look <br> through photographs of white male sex offenders. She studied three trays of mug<br> &nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "h_tQDwAAQBAJ",
+//       etag: "WEwEDTSVsHo",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/h_tQDwAAQBAJ",
+//       volumeInfo: {
+//         title: "Time Served Complete Collection",
+//         subtitle: "Time Served\In Her Defense\The Good Fight\Bail Out",
+//         authors: [
+//           "Julianna Keyes",
+//           "Jade Chandler"
+//         ],
+//         publisher: "Carina Press",
+//         publishedDate: "2018-04-01",
+//         description: "“If you’re looking for a gritty story with a lot of heat (and I mean a lot) and real characters, I’d definitely recommend Time Served.”—DearAuthor.com Julianna Keyes’s entire Time Served trilogy available now! Time Served I’ve never forgotten how it felt to follow Dean Barclay—dangerous, daring, determined—away from the crowd and climb into his beat-up old Trans Am. I was sixteen and gloriously alive for the first time. I was his. Forever. Until I left. Him, my mom, and the trailer park. Without so much as a goodbye. Now Dean’s back, crashing uninvited into neat little lawyerly life. Eight years behind bars have turned him rougher and bigger—and more sexually demanding than any man I’ve ever met. I can’t deny him anything…and that just might end up costing me everything. In Her Defense Caitlin Dufresne has never loved anyone as much as she loves winning. A ruthless fifth-year associate at an elite Chicago firm, she’s on the fast track to partner…until a stupid, serious error enrages her bosses. Caitlin’s continued refusal to share work—or credit—lands her a forced two-week vacation. When she meets Eli Grant, head of the firm’s IT department, Caitlin knows the overgrown frat boy isn’t her type. But too much alcohol and a very public game of Truth or Dare turn into a dirty, breathless one-night stand. Which turns into a (mostly naked) two-week fling. Which turns into something that makes Caitlin incredibly nervous, despite the great sex. The Good Fight I was born a fighter. You had to be, to survive in Camden. Lucky for me, I loved it. Until one night things went too far and I almost lost my ticket out. I went to college. Got a degree. A job on Wall Street. Yet I still wasn’t smart enough to stay away. So now I’m back. And it’s just as bad as I remember. Enter Dr. Susan Jones. She’s brilliant, she’s sexy and she’s a pain in my ass. She wants to hook up, get off, go home. She doesn’t have time for a thug from Camden. But she keeps coming back. FREE BONUS STORY INCLUDED IN THIS VOLUME! Bail Out by Jade Chandler These bonds don’t break ELLE Bounty hunting is in my blood. But my father would much rather see a ring on my finger than a pair of cuffs in my hands, and now I have thirty days to either tie the knot or come up with five hundred grand. Daddy doesn’t know best. Nothing’s going to stand in the way of claiming what’s mine—not even a sexy bounty-hunting biker. REBEL Bonds are my business. I live for the hunt, and if it makes a hefty chunk of change, all the better. I swore there’d never be a woman on the back of my bike…until I watched Elle Jackson take down a thug with a smile and a Taser. When a woman like that asks for your help, you f*ing deliver. Originally published in 2017",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781488036149"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "1488036144"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: false
+//         },
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "1.1.1.0.preview.2",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=h_tQDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=h_tQDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=h_tQDwAAQBAJ&pg=PT1477&dq=detectives+inauthor:keyes&hl=&cd=3&source=gbs_api",
+//         infoLink: "https://play.google.com/store/books/details?id=h_tQDwAAQBAJ&source=gbs_api",
+//         canonicalVolumeLink: "https://market.android.com/details?id=book-h_tQDwAAQBAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "FOR_SALE",
+//         isEbook: true,
+//         listPrice: {
+//           amount: 30,
+//           currencyCode: "ILS"
+//         },
+//         retailPrice: {
+//           amount: 30,
+//           currencyCode: "ILS"
+//         },
+//         buyLink: "https://play.google.com/store/books/details?id=h_tQDwAAQBAJ&rdid=book-h_tQDwAAQBAJ&rdot=1&source=gbs_api",
+//         offers: [
+//           {
+//             finskyOfferType: 1,
+//             listPrice: {
+//               amountInMicros: 30000000,
+//               currencyCode: "ILS"
+//             },
+//             retailPrice: {
+//               amountInMicros: 30000000,
+//               currencyCode: "ILS"
+//             }
+//           }
+//         ]
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: true
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=h_tQDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "Over six foot, welldeveloped muscle that didn&#39;t look stacked on, and close-<br> cropped coalblack hair—the man had Italian and military stamped on his <br> forehead. Inside the door he stopped and spoke with one of the older homicide <br> <b>detectives</b>."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "aVnWJ7uHURMC",
+//       etag: "5/+IB75pJlA",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/aVnWJ7uHURMC",
+//       volumeInfo: {
+//         title: "Epic Marvels",
+//         authors: [
+//           "Chuck Keyes"
+//         ],
+//         publisher: "Larry Larson",
+//         publishedDate: "2012-01-25",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781466094284"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "1466094281"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: true
+//         },
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "preview-1.0.0",
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=aVnWJ7uHURMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=aVnWJ7uHURMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=aVnWJ7uHURMC&pg=PT32&dq=detectives+inauthor:keyes&hl=&cd=4&source=gbs_api",
+//         infoLink: "http://books.google.com/books?id=aVnWJ7uHURMC&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+//         canonicalVolumeLink: "https://books.google.com/books/about/Epic_Marvels.html?hl=&id=aVnWJ7uHURMC"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "NOT_FOR_SALE",
+//         isEbook: false
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/Epic_Marvels-sample-epub.acsm?id=aVnWJ7uHURMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/Epic_Marvels-sample-pdf.acsm?id=aVnWJ7uHURMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=aVnWJ7uHURMC&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "The <b>detective&#39;s</b> cell phone played to his attention with the ringtone, &#39;Bad, Bad <br> Leroy Brown&#39;, and he swiftly answered it. &quot;Yeah, <b>Detective</b> Stone here.&quot; Travis <br> listened for a few minutes. &quot;Okay, Chief, I&#39;m on it.&quot; He slid his cell phone back into <br> his&nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "39HEoQEACAAJ",
+//       etag: "e6IFqhoeZYc",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/39HEoQEACAAJ",
+//       volumeInfo: {
+//         title: "Chasing Shadows",
+//         subtitle: "A Criminal Investigator's Look Into the Paranormal",
+//         authors: [
+//           "Mark Allan Keyes"
+//         ],
+//         publisher: "Rowe Publishing",
+//         publishedDate: "2014-10-15",
+//         description: "After working for years as a criminal investigator, Detective Mark Keyes turns his investigative skills towards the paranormal to help uncover the cause of a strange experience he had as a young boy. Detective Keyes is ultimately searching to uncover the truth and answer the question that he and so many others have asked--Are ghosts real? Detective Keyes takes you through his true life story, an evolution from criminal investigator to paranormal investigator, as he tests psychic phenomena and inserts himself into the supernatural world of haunted homes and businesses.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_10",
+//             identifier: "1939054354"
+//           },
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781939054357"
+//           }
+//         ],
+//         readingModes: {
+//           text: false,
+//           image: false
+//         },
+//         pageCount: 174,
+//         printType: "BOOK",
+//         categories: [
+//           "Body, Mind & Spirit"
+//         ],
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "preview-1.0.0",
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=39HEoQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=39HEoQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=39HEoQEACAAJ&dq=detectives+inauthor:keyes&hl=&cd=5&source=gbs_api",
+//         infoLink: "http://books.google.com/books?id=39HEoQEACAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+//         canonicalVolumeLink: "https://books.google.com/books/about/Chasing_Shadows.html?hl=&id=39HEoQEACAAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "NOT_FOR_SALE",
+//         isEbook: false
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "NO_PAGES",
+//         embeddable: false,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: false
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=39HEoQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "NONE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "After working for years as a criminal investigator, Detective Mark Keyes turns his investigative skills towards the paranormal to help uncover the cause of a strange experience he had as a young boy."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "A5s1AQAAIAAJ",
+//       etag: "eEi1xSl7KxM",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/A5s1AQAAIAAJ",
+//       volumeInfo: {
+//         title: "Cases Argued and Decided in the Supreme Court of the United States",
+//         authors: [
+//           "Stephen Keyes Williams"
+//         ],
+//         publishedDate: "1962",
+//         industryIdentifiers: [
+//           {
+//             type: "OTHER",
+//             identifier: "STANFORD:36105060128290"
+//           }
+//         ],
+//         readingModes: {
+//           text: false,
+//           image: false
+//         },
+//         printType: "BOOK",
+//         categories: [
+//           "Law reports, digests, etc"
+//         ],
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "preview-1.0.0",
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=A5s1AQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=A5s1AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=A5s1AQAAIAAJ&q=detectives+inauthor:keyes&dq=detectives+inauthor:keyes&hl=&cd=6&source=gbs_api",
+//         infoLink: "http://books.google.com/books?id=A5s1AQAAIAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+//         canonicalVolumeLink: "https://books.google.com/books/about/Cases_Argued_and_Decided_in_the_Supreme.html?hl=&id=A5s1AQAAIAAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "NOT_FOR_SALE",
+//         isEbook: false
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "NO_PAGES",
+//         embeddable: false,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: false
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=A5s1AQAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "NONE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "was treated by the grantee as not embracing members of the <b>detective</b> branch of <br> the police department who did not publicly wear official badges, although having <br> such badges concealed upon their persons in such manner that they could be&nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "Rw9Jbn2UpEUC",
+//       etag: "b7Q6+BbQn0A",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/Rw9Jbn2UpEUC",
+//       volumeInfo: {
+//         title: "This Charming Man",
+//         authors: [
+//           "Marian Keyes"
+//         ],
+//         publisher: "Penguin UK",
+//         publishedDate: "2008-04-30",
+//         description: "Four very different women, one awfully charming man and a dark secret that binds them all . . . Marian Keyes' This Charming Man follows women who have been caught in a web of modern love. 'Everybody remembers where they were the day they heard that Paddy de Courcy was getting married' Slick, handsome politician Paddy de Courcy is on the up. His party is set to do well in the elections and he's just announced his engagement to the beautiful Alicia. Which is news to his girlfriend, Lola, who, within hours, finds herself dumped and warned not to talk to the press. Yet journalist Grace is on the prowl. She has been after Paddy ever since he ruined her sister Marnie's life way back in college. Grace is looking for the inside story and thinks Lola holds the key. But do any of them know the real Paddy? 'So funny, so perceptive, so real. I changed my life for this book' Mail on Sunday 'The laughs come fast and furious . . . a gripping, compelling tale' Sunday Independent 'The queen of page-turners . . . brimming with her trademark down-to-earth wit' Cosmopolitan 'Gripping from the start . . . the master at her best' Daily Telegraph",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9780141909776"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "0141909773"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: false
+//         },
+//         pageCount: 912,
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         averageRating: 3.5,
+//         ratingsCount: 38,
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: true,
+//         contentVersion: "3.31.22.0.preview.2",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=Rw9Jbn2UpEUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=Rw9Jbn2UpEUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=Rw9Jbn2UpEUC&pg=PT518&dq=detectives+inauthor:keyes&hl=&cd=7&source=gbs_api",
+//         infoLink: "https://play.google.com/store/books/details?id=Rw9Jbn2UpEUC&source=gbs_api",
+//         canonicalVolumeLink: "https://market.android.com/details?id=book-Rw9Jbn2UpEUC"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "FOR_SALE",
+//         isEbook: true,
+//         listPrice: {
+//           amount: 38,
+//           currencyCode: "ILS"
+//         },
+//         retailPrice: {
+//           amount: 38,
+//           currencyCode: "ILS"
+//         },
+//         buyLink: "https://play.google.com/store/books/details?id=Rw9Jbn2UpEUC&rdid=book-Rw9Jbn2UpEUC&rdot=1&source=gbs_api",
+//         offers: [
+//           {
+//             finskyOfferType: 1,
+//             listPrice: {
+//               amountInMicros: 38000000,
+//               currencyCode: "ILS"
+//             },
+//             retailPrice: {
+//               amountInMicros: 38000000,
+//               currencyCode: "ILS"
+//             }
+//           }
+//         ]
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/This_Charming_Man-sample-epub.acsm?id=Rw9Jbn2UpEUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=Rw9Jbn2UpEUC&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "(In the Val McDermid novels, the <b>detectives</b> say you must stay open-minded.) &#39;<br> Why did he sell his story about his relationship with you?&#39; &#39;The Globe paid him <br> lots of money, I presume.&#39; &#39;You presume? Haven&#39;t you asked him?&#39; She looked at <br> me&nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "zIOu07XQmZsC",
+//       etag: "8EPddqsDda8",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/zIOu07XQmZsC",
+//       volumeInfo: {
+//         title: "Anybody Out There?",
+//         authors: [
+//           "Marian Keyes"
+//         ],
+//         publisher: "Harper Collins",
+//         publishedDate: "2009-03-17",
+//         description: "Bestselling author Marian Keyes has delighted readers with the lives, loves, and foibles of the irrepressible Walsh sisters and their eccentric mammy. In this Life in the Big Apple is perfect for Anna. She has the best job in the world, a lovely apartment, and great friends. Then one morning, she wakes up in her mammy's house in Dublin with stitches in her face, a dislocated knee, hands smashed up, and no memory at all of what happened. As soon as she's able, Anna's flying back to Manhattan, mystified but determined to find out how her life turned upside down. As her past slowly begins coming back to her, she sets out on an outrageous quest—involving lilies, psychics, mediums, and anyone who can point her in the right direction. Marrying life's darker bits with wild humor and tender wit, Anybody Out There? is a strange and wonderfully charming look at love here and ever after.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9780061829956"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "0061829951"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: false
+//         },
+//         pageCount: 464,
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         averageRating: 4,
+//         ratingsCount: 33,
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: true,
+//         contentVersion: "1.1.1.0.preview.2",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=zIOu07XQmZsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=zIOu07XQmZsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=zIOu07XQmZsC&pg=PT54&dq=detectives+inauthor:keyes&hl=&cd=8&source=gbs_api",
+//         infoLink: "https://play.google.com/store/books/details?id=zIOu07XQmZsC&source=gbs_api",
+//         canonicalVolumeLink: "https://market.android.com/details?id=book-zIOu07XQmZsC"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "FOR_SALE",
+//         isEbook: true,
+//         listPrice: {
+//           amount: 44,
+//           currencyCode: "ILS"
+//         },
+//         retailPrice: {
+//           amount: 44,
+//           currencyCode: "ILS"
+//         },
+//         buyLink: "https://play.google.com/store/books/details?id=zIOu07XQmZsC&rdid=book-zIOu07XQmZsC&rdot=1&source=gbs_api",
+//         offers: [
+//           {
+//             finskyOfferType: 1,
+//             listPrice: {
+//               amountInMicros: 44000000,
+//               currencyCode: "ILS"
+//             },
+//             retailPrice: {
+//               amountInMicros: 44000000,
+//               currencyCode: "ILS"
+//             }
+//           }
+//         ]
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/Anybody_Out_There-sample-epub.acsm?id=zIOu07XQmZsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=zIOu07XQmZsC&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "Abouta <b>detective</b>.” I was speechless. Helen claimed—proudly—to be practically <br> illiterate. “I might as well,” she said. “I&#39;ve plenty of material. It&#39;s actually very good, <br> I&#39;ll print it off for you.” The ancient printer screeched andsqueaked forabout ten&nbsp;..."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "UC8mnQEACAAJ",
+//       etag: "Ha3zRb5GUeU",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/UC8mnQEACAAJ",
+//       volumeInfo: {
+//         title: "Dinner at Antoines",
+//         authors: [
+//           "Frances Parkinson Keyes"
+//         ],
+//         publishedDate: "2013-10-16",
+//         description: "Orson Foxworth celebrates his return to New Orleans by giving a dinner in the 1840 room at Antoines restaurant, ostensibly planned to present his niece for the Carnival festivities and to renew his romance with Amelie Lalande. Laland's daughter Odile, accidently spills a red wine down her white dress, a seemingly light incident. However, it is recalled thirty hours later when she is found dead with a strange pistol and an ambiguous note on the floor beside her. Though looking like suicide the plot revolves out of proving otherwise. Infused with much history, customs, and mores of New Orleans of the 1940's. With a new introduction by Patricia Brady setting the history, context of the novel, and with biographical notes on Keyes.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_10",
+//             identifier: "0988962705"
+//           },
+//           {
+//             type: "ISBN_13",
+//             identifier: "9780988962705"
+//           }
+//         ],
+//         readingModes: {
+//           text: false,
+//           image: false
+//         },
+//         pageCount: 464,
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         averageRating: 3,
+//         ratingsCount: 3,
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "preview-1.0.0",
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=UC8mnQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=UC8mnQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=UC8mnQEACAAJ&dq=detectives+inauthor:keyes&hl=&cd=9&source=gbs_api",
+//         infoLink: "http://books.google.com/books?id=UC8mnQEACAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+//         canonicalVolumeLink: "https://books.google.com/books/about/Dinner_at_Antoines.html?hl=&id=UC8mnQEACAAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "NOT_FOR_SALE",
+//         isEbook: false
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "NO_PAGES",
+//         embeddable: false,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: false
+//         },
+//         pdf: {
+//           isAvailable: false
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=UC8mnQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "NONE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "Infused with much history, customs, and mores of New Orleans of the 1940&#39;s. With a new introduction by Patricia Brady setting the history, context of the novel, and with biographical notes on Keyes."
+//       }
+//     },
+//     {
+//       kind: "books#volume",
+//       id: "_aiMAAAAQBAJ",
+//       etag: "zxbdCFEPFBM",
+//       selfLink: "https://www.googleapis.com/books/v1/volumes/_aiMAAAAQBAJ",
+//       volumeInfo: {
+//         title: "Gaps",
+//         authors: [
+//           "Mac Keyes"
+//         ],
+//         publisher: "Xlibris Corporation",
+//         publishedDate: "2007-11-29",
+//         description: "When Blake Adams enters a contest set up by a Corporate Mephistopheles who seduces others into his power schemes, he realizes that his obsession with a game of solitaire called Gaps reveals a solution. He travels to Baghdad, Kigali, Manzini, down the Current River, to the resort town of Branson and through the Corporate world with his sexy wife Brooksie and his trusted friend Jonathan, searching for the key to unlock the confusion about family values and the meaning to life. This is a novel about the search for significance and the discovery of authenticity, investigating the nuances of sex, abuse of political power and the contest for spiritual and social values. This romance/mystery offers a poetic love story reserved for mature readers.",
+//         industryIdentifiers: [
+//           {
+//             type: "ISBN_13",
+//             identifier: "9781469118369"
+//           },
+//           {
+//             type: "ISBN_10",
+//             identifier: "146911836X"
+//           }
+//         ],
+//         readingModes: {
+//           text: true,
+//           image: true
+//         },
+//         pageCount: 229,
+//         printType: "BOOK",
+//         categories: [
+//           "Fiction"
+//         ],
+//         maturityRating: "NOT_MATURE",
+//         allowAnonLogging: false,
+//         contentVersion: "2.4.4.0.preview.3",
+//         panelizationSummary: {
+//           containsEpubBubbles: false,
+//           containsImageBubbles: false
+//         },
+//         imageLinks: {
+//           smallThumbnail: "http://books.google.com/books/content?id=_aiMAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+//           thumbnail: "http://books.google.com/books/content?id=_aiMAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+//         },
+//         language: "en",
+//         previewLink: "http://books.google.com/books?id=_aiMAAAAQBAJ&pg=PA116&dq=detectives+inauthor:keyes&hl=&cd=10&source=gbs_api",
+//         infoLink: "http://books.google.com/books?id=_aiMAAAAQBAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+//         canonicalVolumeLink: "https://books.google.com/books/about/Gaps.html?hl=&id=_aiMAAAAQBAJ"
+//       },
+//       saleInfo: {
+//         country: "IL",
+//         saleability: "NOT_FOR_SALE",
+//         isEbook: false
+//       },
+//       accessInfo: {
+//         country: "IL",
+//         viewability: "PARTIAL",
+//         embeddable: true,
+//         publicDomain: false,
+//         textToSpeechPermission: "ALLOWED",
+//         epub: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/Gaps-sample-epub.acsm?id=_aiMAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         pdf: {
+//           isAvailable: true,
+//           acsTokenLink: "http://books.google.com/books/download/Gaps-sample-pdf.acsm?id=_aiMAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+//         },
+//         webReaderLink: "http://play.google.com/books/reader?id=_aiMAAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+//         accessViewStatus: "SAMPLE",
+//         quoteSharingAllowed: false
+//       },
+//       searchInfo: {
+//         textSnippet: "I would like to call <b>detective</b> William Lucas.” Mr. Lucas was not flamboyant by any <br> means—mostly a “just the facts, maam,” kind of guy—and he approached the <br> witness stand with a certain intimidation. “State your name for the record.” “<br> William&nbsp;..."
+//       }
+//     }
+//   ]
+// };
+
+
+export const  googleApi = {
   kind: "books#volumes",
-    totalItems: 121,
+    totalItems: 66,
   items: [
   {
     kind: "books#volume",
-    id: "_oG_iTxP1pIC",
-    etag: "XAzMbJudjzs",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/_oG_iTxP1pIC",
+    id: "GdfVCwAAQBAJ",
+    etag: "ttrLPTc6M0A",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/GdfVCwAAQBAJ",
     volumeInfo: {
-      title: "Flowers for Algernon",
+      title: "The Michigan Murders",
+      subtitle: "The True Story of the Ypsilanti Ripper’s Reign of Terror",
       authors: [
-        "Daniel Keyes"
+        "Edward Keyes"
       ],
-      publisher: "Houghton Mifflin Harcourt",
-      publishedDate: "2007-12-01",
-      description: "The beloved, classic story of a mentally disabled man whose experimental quest for intelligence mirrors that of Algernon, an extraordinary lab mouse.",
+      publisher: "Open Road Media",
+      publishedDate: "2016-04-19",
+      description: "Edgar Award Finalist: The terrifying true story of savage murders, a terrorized midwestern town, and the serial killer who could have lived next door In 1967, during the time of peace, free love, and hitchhiking, nineteen-year-old Mary Terese Fleszar was last seen alive walking home to her apartment in Ypsilanti, Michigan. One month later, her naked body—stabbed over thirty times and missing both feet and a forearm—was discovered, partially buried, on an abandoned farm. A year later, the body of twenty-year-old Joan Schell was found, similarly violated. Southeastern Michigan was terrorized by something it had never experienced before: a serial killer. Over the next two years, five more bodies were uncovered around Ann Arbor and Ypsilanti, Michigan. All the victims were tortured and mutilated. All were female students. After multiple failed investigations, a chance sighting finally led to a suspect. On the surface, John Norman Collins was an all-American boy—a fraternity member studying elementary education at Eastern Michigan University. But Collins wasn’t all that he seemed. His female friends described him as aggressive and short tempered. And in August 1970, Collins, the “Ypsilanti Ripper,” was arrested, found guilty, and sentenced to life in prison without chance of parole. Written by the coauthor of The French Connection, The Michigan Murders delivers a harrowing depiction of the savage murders that tormented a small midwestern town.",
       industryIdentifiers: [
         {
-          type: "ISBN_10",
-          identifier: "0547539630"
+          type: "ISBN_13",
+          identifier: "9781504025591"
         },
         {
-          type: "ISBN_13",
-          identifier: "9780547539638"
+          type: "ISBN_10",
+          identifier: "1504025598"
         }
       ],
       readingModes: {
         text: true,
         image: true
       },
-      pageCount: 304,
+      pageCount: 360,
       printType: "BOOK",
       categories: [
-        "Fiction"
+        "True Crime"
       ],
-      averageRating: 4,
-      ratingsCount: 164,
+      averageRating: 2,
+      ratingsCount: 1,
       maturityRating: "NOT_MATURE",
       allowAnonLogging: true,
-      contentVersion: "1.11.9.0.preview.3",
+      contentVersion: "1.18.17.0.preview.3",
       panelizationSummary: {
         containsEpubBubbles: false,
         containsImageBubbles: false
       },
       imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=_oG_iTxP1pIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=_oG_iTxP1pIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        smallThumbnail: "http://books.google.com/books/content?id=GdfVCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=GdfVCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       language: "en",
-      previewLink: "http://books.google.com/books?id=_oG_iTxP1pIC&pg=PA225&dq=flowers+inauthor:keyes&hl=&cd=1&source=gbs_api",
-      infoLink: "https://play.google.com/store/books/details?id=_oG_iTxP1pIC&source=gbs_api",
-      canonicalVolumeLink: "https://market.android.com/details?id=book-_oG_iTxP1pIC"
+      previewLink: "http://books.google.com/books?id=GdfVCwAAQBAJ&pg=PT18&dq=detectives+inauthor:keyes&hl=&cd=1&source=gbs_api",
+      infoLink: "https://play.google.com/store/books/details?id=GdfVCwAAQBAJ&source=gbs_api",
+      canonicalVolumeLink: "https://market.android.com/details?id=book-GdfVCwAAQBAJ"
     },
     saleInfo: {
       country: "IL",
       saleability: "FOR_SALE",
       isEbook: true,
       listPrice: {
-        amount: 46,
+        amount: 68,
         currencyCode: "ILS"
       },
       retailPrice: {
-        amount: 46,
+        amount: 68,
         currencyCode: "ILS"
       },
-      buyLink: "https://play.google.com/store/books/details?id=_oG_iTxP1pIC&rdid=book-_oG_iTxP1pIC&rdot=1&source=gbs_api",
+      buyLink: "https://play.google.com/store/books/details?id=GdfVCwAAQBAJ&rdid=book-GdfVCwAAQBAJ&rdot=1&source=gbs_api",
       offers: [
         {
           finskyOfferType: 1,
           listPrice: {
-            amountInMicros: 46000000,
+            amountInMicros: 68000000,
             currencyCode: "ILS"
           },
           retailPrice: {
-            amountInMicros: 46000000,
+            amountInMicros: 68000000,
             currencyCode: "ILS"
           }
         }
@@ -87,91 +932,24 @@ export const  googleApi ={
       textToSpeechPermission: "ALLOWED",
       epub: {
         isAvailable: true,
-        acsTokenLink: "http://books.google.com/books/download/Flowers_for_Algernon-sample-epub.acsm?id=_oG_iTxP1pIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        acsTokenLink: "http://books.google.com/books/download/The_Michigan_Murders-sample-epub.acsm?id=GdfVCwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
       },
       pdf: {
         isAvailable: true,
-        acsTokenLink: "http://books.google.com/books/download/Flowers_for_Algernon-sample-pdf.acsm?id=_oG_iTxP1pIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        acsTokenLink: "http://books.google.com/books/download/The_Michigan_Murders-sample-pdf.acsm?id=GdfVCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
       },
-      webReaderLink: "http://play.google.com/books/reader?id=_oG_iTxP1pIC&hl=&printsec=frontcover&source=gbs_api",
-      accessViewStatus: "SAMPLE",
-      quoteSharingAllowed: false
-    }
-  },
-  {
-    kind: "books#volume",
-    id: "F1wgqlNi8AMC",
-    etag: "0gr7XDBi9yk",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/F1wgqlNi8AMC",
-    volumeInfo: {
-      title: "Flowers for Algernon",
-      subtitle: "Full",
-      authors: [
-        "David Rogers",
-        "Daniel Keyes"
-      ],
-      publisher: "Dramatic Publishing",
-      publishedDate: "1969",
-      description: "The compelling story of Charlie Gordon, willing victim of a strange experiment - a moron, a genius, a man in search of himself. Poignant, funny, tragic, but with a hope for the indomitable spirit of man, this unusual play tells a story you will long remember. It also offers a magnificent role.",
-      industryIdentifiers: [
-        {
-          type: "ISBN_10",
-          identifier: "0871295377"
-        },
-        {
-          type: "ISBN_13",
-          identifier: "9780871295378"
-        }
-      ],
-      readingModes: {
-        text: false,
-        image: true
-      },
-      pageCount: 117,
-      printType: "BOOK",
-      averageRating: 5,
-      ratingsCount: 1,
-      maturityRating: "NOT_MATURE",
-      allowAnonLogging: false,
-      contentVersion: "0.0.1.0.preview.1",
-      imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=F1wgqlNi8AMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=F1wgqlNi8AMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      language: "en",
-      previewLink: "http://books.google.com/books?id=F1wgqlNi8AMC&pg=PA3&dq=flowers+inauthor:keyes&hl=&cd=2&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=F1wgqlNi8AMC&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/Flowers_for_Algernon.html?hl=&id=F1wgqlNi8AMC"
-    },
-    saleInfo: {
-      country: "IL",
-      saleability: "NOT_FOR_SALE",
-      isEbook: false
-    },
-    accessInfo: {
-      country: "IL",
-      viewability: "PARTIAL",
-      embeddable: true,
-      publicDomain: false,
-      textToSpeechPermission: "ALLOWED",
-      epub: {
-        isAvailable: false
-      },
-      pdf: {
-        isAvailable: false
-      },
-      webReaderLink: "http://play.google.com/books/reader?id=F1wgqlNi8AMC&hl=&printsec=frontcover&source=gbs_api",
+      webReaderLink: "http://play.google.com/books/reader?id=GdfVCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
       accessViewStatus: "SAMPLE",
       quoteSharingAllowed: false
     },
     searchInfo: {
-      textSnippet: "(These are just suggestions; parts can be divided many ways, possibly making <br> the cast smaller. Some very small parts can be eliminated.) SETTING &quot;<b>Flowers</b> for <br> Algernon&quot; is played in drapes, with certain <b>FLOWERS</b> FOR ALGERNON."
+      textSnippet: "then rang upstairs to the <b>Detective</b> Bureau. Half of the post&#39;s four <b>detectives</b> were <br> on duty in the two small secondfloor offices, <b>Detective</b> Sergeants Ken Taylor and <br> Ken Kraus. The senior of the two, Taylor, took the call. After listening a few&nbsp;..."
     }
   },
   {
     kind: "books#volume",
     id: "cs5MDwAAQBAJ",
-    etag: "ohXzAAIDNFM",
+    etag: "6nzCYVTim38",
     selfLink: "https://www.googleapis.com/books/v1/volumes/cs5MDwAAQBAJ",
     volumeInfo: {
       title: "The Minds of Billy Milligan",
@@ -214,7 +992,7 @@ export const  googleApi ={
         thumbnail: "http://books.google.com/books/content?id=cs5MDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       language: "en",
-      previewLink: "http://books.google.com/books?id=cs5MDwAAQBAJ&pg=PT485&dq=flowers+inauthor:keyes&hl=&cd=3&source=gbs_api",
+      previewLink: "http://books.google.com/books?id=cs5MDwAAQBAJ&pg=PT22&dq=detectives+inauthor:keyes&hl=&cd=2&source=gbs_api",
       infoLink: "https://play.google.com/store/books/details?id=cs5MDwAAQBAJ&source=gbs_api",
       canonicalVolumeLink: "https://market.android.com/details?id=book-cs5MDwAAQBAJ"
     },
@@ -263,255 +1041,80 @@ export const  googleApi ={
       quoteSharingAllowed: false
     },
     searchInfo: {
-      textSnippet: "Making no references to the other psychologists and psychiatrists who had <br> testified that Milligan was not dangerous, Judge <b>Flowers</b> ordered continued <br> treatment at the Dayton Forensic Hospital “as the least restrictive alternative <br> available&nbsp;..."
+      textSnippet: "Miller and Bessell drove Polly back to the <b>Detective</b> Bureau to work with the <br> department artist at making a composite drawing. Then Miller asked Polly to look <br> through photographs of white male sex offenders. She studied three trays of mug<br> &nbsp;..."
     }
   },
   {
     kind: "books#volume",
-    id: "H02nswEACAAJ",
-    etag: "NdSWAxXY7D0",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/H02nswEACAAJ",
+    id: "h_tQDwAAQBAJ",
+    etag: "WEwEDTSVsHo",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/h_tQDwAAQBAJ",
     volumeInfo: {
-      title: "CLASSICS Flowers for Algernon",
+      title: "Time Served Complete Collection",
+      subtitle: "Time Served\In Her Defense\The Good Fight\Bail Out",
       authors: [
-        "Daniel Keyes"
+        "Julianna Keyes",
+        "Jade Chandler"
       ],
-      industryIdentifiers: [
-        {
-          type: "OTHER",
-          identifier: "OCLC:1023012006"
-        }
-      ],
-      readingModes: {
-        text: false,
-        image: false
-      },
-      printType: "BOOK",
-      categories: [
-        "Brain"
-      ],
-      maturityRating: "NOT_MATURE",
-      allowAnonLogging: false,
-      contentVersion: "preview-1.0.0",
-      panelizationSummary: {
-        containsEpubBubbles: false,
-        containsImageBubbles: false
-      },
-      language: "en",
-      previewLink: "http://books.google.com/books?id=H02nswEACAAJ&dq=flowers+inauthor:keyes&hl=&cd=4&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=H02nswEACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/CLASSICS_Flowers_for_Algernon.html?hl=&id=H02nswEACAAJ"
-    },
-    saleInfo: {
-      country: "IL",
-      saleability: "NOT_FOR_SALE",
-      isEbook: false
-    },
-    accessInfo: {
-      country: "IL",
-      viewability: "NO_PAGES",
-      embeddable: false,
-      publicDomain: false,
-      textToSpeechPermission: "ALLOWED",
-      epub: {
-        isAvailable: false
-      },
-      pdf: {
-        isAvailable: false
-      },
-      webReaderLink: "http://play.google.com/books/reader?id=H02nswEACAAJ&hl=&printsec=frontcover&source=gbs_api",
-      accessViewStatus: "NONE",
-      quoteSharingAllowed: false
-    }
-  },
-  {
-    kind: "books#volume",
-    id: "xJ9UswEACAAJ",
-    etag: "zZEwBb6AsT8",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/xJ9UswEACAAJ",
-    volumeInfo: {
-      title: "Flowers for Algernon Pb",
-      authors: [
-        "Daniel Keyes"
-      ],
-      industryIdentifiers: [
-        {
-          type: "OTHER",
-          identifier: "OCLC:1003087126"
-        }
-      ],
-      readingModes: {
-        text: false,
-        image: false
-      },
-      printType: "BOOK",
-      maturityRating: "NOT_MATURE",
-      allowAnonLogging: false,
-      contentVersion: "preview-1.0.0",
-      panelizationSummary: {
-        containsEpubBubbles: false,
-        containsImageBubbles: false
-      },
-      language: "en",
-      previewLink: "http://books.google.com/books?id=xJ9UswEACAAJ&dq=flowers+inauthor:keyes&hl=&cd=5&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=xJ9UswEACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/Flowers_for_Algernon_Pb.html?hl=&id=xJ9UswEACAAJ"
-    },
-    saleInfo: {
-      country: "IL",
-      saleability: "NOT_FOR_SALE",
-      isEbook: false
-    },
-    accessInfo: {
-      country: "IL",
-      viewability: "NO_PAGES",
-      embeddable: false,
-      publicDomain: false,
-      textToSpeechPermission: "ALLOWED",
-      epub: {
-        isAvailable: false
-      },
-      pdf: {
-        isAvailable: false
-      },
-      webReaderLink: "http://play.google.com/books/reader?id=xJ9UswEACAAJ&hl=&printsec=frontcover&source=gbs_api",
-      accessViewStatus: "NONE",
-      quoteSharingAllowed: false
-    }
-  },
-  {
-    kind: "books#volume",
-    id: "LRlCAAAAYAAJ",
-    etag: "OD9GuvIrBjg",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/LRlCAAAAYAAJ",
-    volumeInfo: {
-      title: "Some Environmental Factors Influencing Bud Formation, Abscission and Flower Production of Gardenias",
-      authors: [
-        "Curtis Gilbert Keyes"
-      ],
-      publishedDate: "1946",
-      industryIdentifiers: [
-        {
-          type: "OTHER",
-          identifier: "CORNELL:31924002987646"
-        }
-      ],
-      readingModes: {
-        text: false,
-        image: false
-      },
-      pageCount: 190,
-      printType: "BOOK",
-      categories: [
-        "Gardenia"
-      ],
-      maturityRating: "NOT_MATURE",
-      allowAnonLogging: false,
-      contentVersion: "preview-1.0.0",
-      imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=LRlCAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=LRlCAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      },
-      language: "en",
-      previewLink: "http://books.google.com/books?id=LRlCAAAAYAAJ&q=flowers+inauthor:keyes&dq=flowers+inauthor:keyes&hl=&cd=6&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=LRlCAAAAYAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/Some_Environmental_Factors_Influencing_B.html?hl=&id=LRlCAAAAYAAJ"
-    },
-    saleInfo: {
-      country: "IL",
-      saleability: "NOT_FOR_SALE",
-      isEbook: false
-    },
-    accessInfo: {
-      country: "IL",
-      viewability: "NO_PAGES",
-      embeddable: false,
-      publicDomain: false,
-      textToSpeechPermission: "ALLOWED",
-      epub: {
-        isAvailable: false
-      },
-      pdf: {
-        isAvailable: false
-      },
-      webReaderLink: "http://play.google.com/books/reader?id=LRlCAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
-      accessViewStatus: "NONE",
-      quoteSharingAllowed: false
-    }
-  },
-  {
-    kind: "books#volume",
-    id: "PDTD2hPNcjAC",
-    etag: "nHX/hvdUUq8",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/PDTD2hPNcjAC",
-    volumeInfo: {
-      title: "Algernon, Charlie, and I",
-      subtitle: "A Writer's Journey",
-      authors: [
-        "Daniel Keyes"
-      ],
-      publisher: "Houghton Mifflin Harcourt",
-      publishedDate: "2004-09-01",
-      description: "In Flowers for Algernon, Daniel Keyes created an unlikely duo-a laboratory mouse and a man-who captured the hearts of millions of readers around the world. Now, in Algernon, Charlie, and I, Keyes reveals his methods of creating fiction as well as the heartbreaks and joys of being published. With admirable insight he shares with readers, writers, teachers, and students the creative life behind his classic novel, included here in its original short-story form. All those who love stories, storytelling, and the remarkable characters of Charlie and Algernon will delight in accompanying their creator on this inspirational voyage of discovery.",
+      publisher: "Carina Press",
+      publishedDate: "2018-04-01",
+      description: "“If you’re looking for a gritty story with a lot of heat (and I mean a lot) and real characters, I’d definitely recommend Time Served.”—DearAuthor.com Julianna Keyes’s entire Time Served trilogy available now! Time Served I’ve never forgotten how it felt to follow Dean Barclay—dangerous, daring, determined—away from the crowd and climb into his beat-up old Trans Am. I was sixteen and gloriously alive for the first time. I was his. Forever. Until I left. Him, my mom, and the trailer park. Without so much as a goodbye. Now Dean’s back, crashing uninvited into neat little lawyerly life. Eight years behind bars have turned him rougher and bigger—and more sexually demanding than any man I’ve ever met. I can’t deny him anything…and that just might end up costing me everything. In Her Defense Caitlin Dufresne has never loved anyone as much as she loves winning. A ruthless fifth-year associate at an elite Chicago firm, she’s on the fast track to partner…until a stupid, serious error enrages her bosses. Caitlin’s continued refusal to share work—or credit—lands her a forced two-week vacation. When she meets Eli Grant, head of the firm’s IT department, Caitlin knows the overgrown frat boy isn’t her type. But too much alcohol and a very public game of Truth or Dare turn into a dirty, breathless one-night stand. Which turns into a (mostly naked) two-week fling. Which turns into something that makes Caitlin incredibly nervous, despite the great sex. The Good Fight I was born a fighter. You had to be, to survive in Camden. Lucky for me, I loved it. Until one night things went too far and I almost lost my ticket out. I went to college. Got a degree. A job on Wall Street. Yet I still wasn’t smart enough to stay away. So now I’m back. And it’s just as bad as I remember. Enter Dr. Susan Jones. She’s brilliant, she’s sexy and she’s a pain in my ass. She wants to hook up, get off, go home. She doesn’t have time for a thug from Camden. But she keeps coming back. FREE BONUS STORY INCLUDED IN THIS VOLUME! Bail Out by Jade Chandler These bonds don’t break ELLE Bounty hunting is in my blood. But my father would much rather see a ring on my finger than a pair of cuffs in my hands, and now I have thirty days to either tie the knot or come up with five hundred grand. Daddy doesn’t know best. Nothing’s going to stand in the way of claiming what’s mine—not even a sexy bounty-hunting biker. REBEL Bonds are my business. I live for the hunt, and if it makes a hefty chunk of change, all the better. I swore there’d never be a woman on the back of my bike…until I watched Elle Jackson take down a thug with a smile and a Taser. When a woman like that asks for your help, you f*ing deliver. Originally published in 2017",
       industryIdentifiers: [
         {
           type: "ISBN_13",
-          identifier: "9780547564081"
+          identifier: "9781488036149"
         },
         {
           type: "ISBN_10",
-          identifier: "0547564082"
+          identifier: "1488036144"
         }
       ],
       readingModes: {
         text: true,
-        image: true
+        image: false
       },
-      pageCount: 228,
       printType: "BOOK",
       categories: [
-        "Biography & Autobiography"
+        "Fiction"
       ],
-      averageRating: 4,
-      ratingsCount: 3,
       maturityRating: "NOT_MATURE",
-      allowAnonLogging: true,
-      contentVersion: "1.7.7.0.preview.3",
+      allowAnonLogging: false,
+      contentVersion: "1.1.1.0.preview.2",
       panelizationSummary: {
         containsEpubBubbles: false,
         containsImageBubbles: false
       },
       imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=PDTD2hPNcjAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=PDTD2hPNcjAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        smallThumbnail: "http://books.google.com/books/content?id=h_tQDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=h_tQDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       language: "en",
-      previewLink: "http://books.google.com/books?id=PDTD2hPNcjAC&printsec=frontcover&dq=flowers+inauthor:keyes&hl=&cd=7&source=gbs_api",
-      infoLink: "https://play.google.com/store/books/details?id=PDTD2hPNcjAC&source=gbs_api",
-      canonicalVolumeLink: "https://market.android.com/details?id=book-PDTD2hPNcjAC"
+      previewLink: "http://books.google.com/books?id=h_tQDwAAQBAJ&pg=PT1477&dq=detectives+inauthor:keyes&hl=&cd=3&source=gbs_api",
+      infoLink: "https://play.google.com/store/books/details?id=h_tQDwAAQBAJ&source=gbs_api",
+      canonicalVolumeLink: "https://market.android.com/details?id=book-h_tQDwAAQBAJ"
     },
     saleInfo: {
       country: "IL",
       saleability: "FOR_SALE",
       isEbook: true,
       listPrice: {
-        amount: 52,
+        amount: 30,
         currencyCode: "ILS"
       },
       retailPrice: {
-        amount: 52,
+        amount: 30,
         currencyCode: "ILS"
       },
-      buyLink: "https://play.google.com/store/books/details?id=PDTD2hPNcjAC&rdid=book-PDTD2hPNcjAC&rdot=1&source=gbs_api",
+      buyLink: "https://play.google.com/store/books/details?id=h_tQDwAAQBAJ&rdid=book-h_tQDwAAQBAJ&rdot=1&source=gbs_api",
       offers: [
         {
           finskyOfferType: 1,
           listPrice: {
-            amountInMicros: 52000000,
+            amountInMicros: 30000000,
             currencyCode: "ILS"
           },
           retailPrice: {
-            amountInMicros: 52000000,
+            amountInMicros: 30000000,
             currencyCode: "ILS"
           }
         }
@@ -524,70 +1127,269 @@ export const  googleApi ={
       publicDomain: false,
       textToSpeechPermission: "ALLOWED",
       epub: {
-        isAvailable: true,
-        acsTokenLink: "http://books.google.com/books/download/Algernon_Charlie_and_I-sample-epub.acsm?id=PDTD2hPNcjAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        isAvailable: true
       },
       pdf: {
-        isAvailable: true,
-        acsTokenLink: "http://books.google.com/books/download/Algernon_Charlie_and_I-sample-pdf.acsm?id=PDTD2hPNcjAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        isAvailable: false
       },
-      webReaderLink: "http://play.google.com/books/reader?id=PDTD2hPNcjAC&hl=&printsec=frontcover&source=gbs_api",
+      webReaderLink: "http://play.google.com/books/reader?id=h_tQDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
       accessViewStatus: "SAMPLE",
       quoteSharingAllowed: false
     },
     searchInfo: {
-      textSnippet: "Now, in Algernon, Charlie, and I, Keyes reveals his methods of creating fiction as well as the heartbreaks and joys of being published."
+      textSnippet: "Over six foot, welldeveloped muscle that didn&#39;t look stacked on, and close-<br> cropped coalblack hair—the man had Italian and military stamped on his <br> forehead. Inside the door he stopped and spoke with one of the older homicide <br> <b>detectives</b>."
     }
   },
   {
     kind: "books#volume",
-    id: "Co89jQRg4_oC",
-    etag: "J2tA7jQLRYI",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/Co89jQRg4_oC",
+    id: "aVnWJ7uHURMC",
+    etag: "5/+IB75pJlA",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/aVnWJ7uHURMC",
     volumeInfo: {
-      title: "The Other Side of the Story",
+      title: "Epic Marvels",
+      authors: [
+        "Chuck Keyes"
+      ],
+      publisher: "Larry Larson",
+      publishedDate: "2012-01-25",
+      industryIdentifiers: [
+        {
+          type: "ISBN_13",
+          identifier: "9781466094284"
+        },
+        {
+          type: "ISBN_10",
+          identifier: "1466094281"
+        }
+      ],
+      readingModes: {
+        text: true,
+        image: true
+      },
+      printType: "BOOK",
+      categories: [
+        "Fiction"
+      ],
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: false,
+      contentVersion: "preview-1.0.0",
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=aVnWJ7uHURMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=aVnWJ7uHURMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      language: "en",
+      previewLink: "http://books.google.com/books?id=aVnWJ7uHURMC&pg=PT32&dq=detectives+inauthor:keyes&hl=&cd=4&source=gbs_api",
+      infoLink: "http://books.google.com/books?id=aVnWJ7uHURMC&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+      canonicalVolumeLink: "https://books.google.com/books/about/Epic_Marvels.html?hl=&id=aVnWJ7uHURMC"
+    },
+    saleInfo: {
+      country: "IL",
+      saleability: "NOT_FOR_SALE",
+      isEbook: false
+    },
+    accessInfo: {
+      country: "IL",
+      viewability: "PARTIAL",
+      embeddable: true,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED",
+      epub: {
+        isAvailable: true,
+        acsTokenLink: "http://books.google.com/books/download/Epic_Marvels-sample-epub.acsm?id=aVnWJ7uHURMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      pdf: {
+        isAvailable: true,
+        acsTokenLink: "http://books.google.com/books/download/Epic_Marvels-sample-pdf.acsm?id=aVnWJ7uHURMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      webReaderLink: "http://play.google.com/books/reader?id=aVnWJ7uHURMC&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "SAMPLE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet: "The <b>detective&#39;s</b> cell phone played to his attention with the ringtone, &#39;Bad, Bad <br> Leroy Brown&#39;, and he swiftly answered it. &quot;Yeah, <b>Detective</b> Stone here.&quot; Travis <br> listened for a few minutes. &quot;Okay, Chief, I&#39;m on it.&quot; He slid his cell phone back into <br> his&nbsp;..."
+    }
+  },
+  {
+    kind: "books#volume",
+    id: "39HEoQEACAAJ",
+    etag: "e6IFqhoeZYc",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/39HEoQEACAAJ",
+    volumeInfo: {
+      title: "Chasing Shadows",
+      subtitle: "A Criminal Investigator's Look Into the Paranormal",
+      authors: [
+        "Mark Allan Keyes"
+      ],
+      publisher: "Rowe Publishing",
+      publishedDate: "2014-10-15",
+      description: "After working for years as a criminal investigator, Detective Mark Keyes turns his investigative skills towards the paranormal to help uncover the cause of a strange experience he had as a young boy. Detective Keyes is ultimately searching to uncover the truth and answer the question that he and so many others have asked--Are ghosts real? Detective Keyes takes you through his true life story, an evolution from criminal investigator to paranormal investigator, as he tests psychic phenomena and inserts himself into the supernatural world of haunted homes and businesses.",
+      industryIdentifiers: [
+        {
+          type: "ISBN_10",
+          identifier: "1939054354"
+        },
+        {
+          type: "ISBN_13",
+          identifier: "9781939054357"
+        }
+      ],
+      readingModes: {
+        text: false,
+        image: false
+      },
+      pageCount: 174,
+      printType: "BOOK",
+      categories: [
+        "Body, Mind & Spirit"
+      ],
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: false,
+      contentVersion: "preview-1.0.0",
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=39HEoQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=39HEoQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      language: "en",
+      previewLink: "http://books.google.com/books?id=39HEoQEACAAJ&dq=detectives+inauthor:keyes&hl=&cd=5&source=gbs_api",
+      infoLink: "http://books.google.com/books?id=39HEoQEACAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+      canonicalVolumeLink: "https://books.google.com/books/about/Chasing_Shadows.html?hl=&id=39HEoQEACAAJ"
+    },
+    saleInfo: {
+      country: "IL",
+      saleability: "NOT_FOR_SALE",
+      isEbook: false
+    },
+    accessInfo: {
+      country: "IL",
+      viewability: "NO_PAGES",
+      embeddable: false,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED",
+      epub: {
+        isAvailable: false
+      },
+      pdf: {
+        isAvailable: false
+      },
+      webReaderLink: "http://play.google.com/books/reader?id=39HEoQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "NONE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet: "After working for years as a criminal investigator, Detective Mark Keyes turns his investigative skills towards the paranormal to help uncover the cause of a strange experience he had as a young boy."
+    }
+  },
+  {
+    kind: "books#volume",
+    id: "A5s1AQAAIAAJ",
+    etag: "eEi1xSl7KxM",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/A5s1AQAAIAAJ",
+    volumeInfo: {
+      title: "Cases Argued and Decided in the Supreme Court of the United States",
+      authors: [
+        "Stephen Keyes Williams"
+      ],
+      publishedDate: "1962",
+      industryIdentifiers: [
+        {
+          type: "OTHER",
+          identifier: "STANFORD:36105060128290"
+        }
+      ],
+      readingModes: {
+        text: false,
+        image: false
+      },
+      printType: "BOOK",
+      categories: [
+        "Law reports, digests, etc"
+      ],
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: false,
+      contentVersion: "preview-1.0.0",
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=A5s1AQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=A5s1AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      language: "en",
+      previewLink: "http://books.google.com/books?id=A5s1AQAAIAAJ&q=detectives+inauthor:keyes&dq=detectives+inauthor:keyes&hl=&cd=6&source=gbs_api",
+      infoLink: "http://books.google.com/books?id=A5s1AQAAIAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+      canonicalVolumeLink: "https://books.google.com/books/about/Cases_Argued_and_Decided_in_the_Supreme.html?hl=&id=A5s1AQAAIAAJ"
+    },
+    saleInfo: {
+      country: "IL",
+      saleability: "NOT_FOR_SALE",
+      isEbook: false
+    },
+    accessInfo: {
+      country: "IL",
+      viewability: "NO_PAGES",
+      embeddable: false,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED",
+      epub: {
+        isAvailable: false
+      },
+      pdf: {
+        isAvailable: false
+      },
+      webReaderLink: "http://play.google.com/books/reader?id=A5s1AQAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "NONE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet: "was treated by the grantee as not embracing members of the <b>detective</b> branch of <br> the police department who did not publicly wear official badges, although having <br> such badges concealed upon their persons in such manner that they could be&nbsp;..."
+    }
+  },
+  {
+    kind: "books#volume",
+    id: "Rw9Jbn2UpEUC",
+    etag: "b7Q6+BbQn0A",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/Rw9Jbn2UpEUC",
+    volumeInfo: {
+      title: "This Charming Man",
       authors: [
         "Marian Keyes"
       ],
       publisher: "Penguin UK",
-      publishedDate: "2005-03-10",
-      description: "The lives of three women collide when a highflying literary agent finds herself representing two women who were once best friends . . . 'There are three sides to every story. Your side, their side, and the truth . . .' Sharkish literary agent Jojo has just made a very bad career move - she's slept with her married boss Mark . . . Lily - Jojo's bestselling author - has just blown her advance on a house with new boyfriend Anton, only to come down with writer's block . . . Gemma used to be Lily's best friend until Lily ran off with Anton. Now she's pouring her heart out and a certain literary agent likes her style . . . Soon the fortunes of Jojo, Lily and Gemma are horribly entangled. But each is about to discover that there's more than one side to every story . . . 'It had me in tears . . . and, barking with laughter' Daily Telegraph 'A wonderful, subtle, hilarious and highly sophisticated novel. You can't stop reading' Evening Standard 'Packed with sound writing, wit and common sense' Guardian",
+      publishedDate: "2008-04-30",
+      description: "Four very different women, one awfully charming man and a dark secret that binds them all . . . Marian Keyes' This Charming Man follows women who have been caught in a web of modern love. 'Everybody remembers where they were the day they heard that Paddy de Courcy was getting married' Slick, handsome politician Paddy de Courcy is on the up. His party is set to do well in the elections and he's just announced his engagement to the beautiful Alicia. Which is news to his girlfriend, Lola, who, within hours, finds herself dumped and warned not to talk to the press. Yet journalist Grace is on the prowl. She has been after Paddy ever since he ruined her sister Marnie's life way back in college. Grace is looking for the inside story and thinks Lola holds the key. But do any of them know the real Paddy? 'So funny, so perceptive, so real. I changed my life for this book' Mail on Sunday 'The laughs come fast and furious . . . a gripping, compelling tale' Sunday Independent 'The queen of page-turners . . . brimming with her trademark down-to-earth wit' Cosmopolitan 'Gripping from the start . . . the master at her best' Daily Telegraph",
       industryIdentifiers: [
         {
           type: "ISBN_13",
-          identifier: "9780141909653"
+          identifier: "9780141909776"
         },
         {
           type: "ISBN_10",
-          identifier: "014190965X"
+          identifier: "0141909773"
         }
       ],
       readingModes: {
         text: true,
         image: false
       },
-      pageCount: 656,
+      pageCount: 912,
       printType: "BOOK",
       categories: [
         "Fiction"
       ],
-      averageRating: 4,
-      ratingsCount: 13,
+      averageRating: 3.5,
+      ratingsCount: 38,
       maturityRating: "NOT_MATURE",
       allowAnonLogging: true,
-      contentVersion: "1.28.22.0.preview.2",
+      contentVersion: "3.31.22.0.preview.2",
       panelizationSummary: {
         containsEpubBubbles: false,
         containsImageBubbles: false
       },
       imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=Co89jQRg4_oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=Co89jQRg4_oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        smallThumbnail: "http://books.google.com/books/content?id=Rw9Jbn2UpEUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=Rw9Jbn2UpEUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       language: "en",
-      previewLink: "http://books.google.com/books?id=Co89jQRg4_oC&pg=PT62&dq=flowers+inauthor:keyes&hl=&cd=8&source=gbs_api",
-      infoLink: "https://play.google.com/store/books/details?id=Co89jQRg4_oC&source=gbs_api",
-      canonicalVolumeLink: "https://market.android.com/details?id=book-Co89jQRg4_oC"
+      previewLink: "http://books.google.com/books?id=Rw9Jbn2UpEUC&pg=PT518&dq=detectives+inauthor:keyes&hl=&cd=7&source=gbs_api",
+      infoLink: "https://play.google.com/store/books/details?id=Rw9Jbn2UpEUC&source=gbs_api",
+      canonicalVolumeLink: "https://market.android.com/details?id=book-Rw9Jbn2UpEUC"
     },
     saleInfo: {
       country: "IL",
@@ -601,7 +1403,7 @@ export const  googleApi ={
         amount: 38,
         currencyCode: "ILS"
       },
-      buyLink: "https://play.google.com/store/books/details?id=Co89jQRg4_oC&rdid=book-Co89jQRg4_oC&rdot=1&source=gbs_api",
+      buyLink: "https://play.google.com/store/books/details?id=Rw9Jbn2UpEUC&rdid=book-Rw9Jbn2UpEUC&rdot=1&source=gbs_api",
       offers: [
         {
           finskyOfferType: 1,
@@ -624,111 +1426,161 @@ export const  googleApi ={
       textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
       epub: {
         isAvailable: true,
-        acsTokenLink: "http://books.google.com/books/download/The_Other_Side_of_the_Story-sample-epub.acsm?id=Co89jQRg4_oC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        acsTokenLink: "http://books.google.com/books/download/This_Charming_Man-sample-epub.acsm?id=Rw9Jbn2UpEUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
       },
       pdf: {
         isAvailable: false
       },
-      webReaderLink: "http://play.google.com/books/reader?id=Co89jQRg4_oC&hl=&printsec=frontcover&source=gbs_api",
+      webReaderLink: "http://play.google.com/books/reader?id=Rw9Jbn2UpEUC&hl=&printsec=frontcover&source=gbs_api",
       accessViewStatus: "SAMPLE",
       quoteSharingAllowed: false
     },
     searchInfo: {
-      textSnippet: "Instead, I&#39;d thank him and say that buttercups were my favourite <b>flowers</b>. (As if.) At <br> some stage I&#39;d end up in his kitchen where I&#39;d see him tenderly feeding a tiny <br> lamb from a baby&#39;s bottle and my heart would begin its long overdue thaw."
+      textSnippet: "(In the Val McDermid novels, the <b>detectives</b> say you must stay open-minded.) &#39;<br> Why did he sell his story about his relationship with you?&#39; &#39;The Globe paid him <br> lots of money, I presume.&#39; &#39;You presume? Haven&#39;t you asked him?&#39; She looked at <br> me&nbsp;..."
     }
   },
   {
     kind: "books#volume",
-    id: "VsfUAAAAMAAJ",
-    etag: "7SX2hT3wmsk",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/VsfUAAAAMAAJ",
+    id: "zIOu07XQmZsC",
+    etag: "8EPddqsDda8",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/zIOu07XQmZsC",
     volumeInfo: {
-      title: "Written in Heaven",
-      subtitle: "The Life on Earth of the Little Flower of Lisieux",
+      title: "Anybody Out There?",
+      authors: [
+        "Marian Keyes"
+      ],
+      publisher: "Harper Collins",
+      publishedDate: "2009-03-17",
+      description: "Bestselling author Marian Keyes has delighted readers with the lives, loves, and foibles of the irrepressible Walsh sisters and their eccentric mammy. In this Life in the Big Apple is perfect for Anna. She has the best job in the world, a lovely apartment, and great friends. Then one morning, she wakes up in her mammy's house in Dublin with stitches in her face, a dislocated knee, hands smashed up, and no memory at all of what happened. As soon as she's able, Anna's flying back to Manhattan, mystified but determined to find out how her life turned upside down. As her past slowly begins coming back to her, she sets out on an outrageous quest—involving lilies, psychics, mediums, and anyone who can point her in the right direction. Marrying life's darker bits with wild humor and tender wit, Anybody Out There? is a strange and wonderfully charming look at love here and ever after.",
+      industryIdentifiers: [
+        {
+          type: "ISBN_13",
+          identifier: "9780061829956"
+        },
+        {
+          type: "ISBN_10",
+          identifier: "0061829951"
+        }
+      ],
+      readingModes: {
+        text: true,
+        image: false
+      },
+      pageCount: 464,
+      printType: "BOOK",
+      categories: [
+        "Fiction"
+      ],
+      averageRating: 4,
+      ratingsCount: 33,
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: true,
+      contentVersion: "1.1.1.0.preview.2",
+      panelizationSummary: {
+        containsEpubBubbles: false,
+        containsImageBubbles: false
+      },
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=zIOu07XQmZsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=zIOu07XQmZsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      language: "en",
+      previewLink: "http://books.google.com/books?id=zIOu07XQmZsC&pg=PT54&dq=detectives+inauthor:keyes&hl=&cd=8&source=gbs_api",
+      infoLink: "https://play.google.com/store/books/details?id=zIOu07XQmZsC&source=gbs_api",
+      canonicalVolumeLink: "https://market.android.com/details?id=book-zIOu07XQmZsC"
+    },
+    saleInfo: {
+      country: "IL",
+      saleability: "FOR_SALE",
+      isEbook: true,
+      listPrice: {
+        amount: 44,
+        currencyCode: "ILS"
+      },
+      retailPrice: {
+        amount: 44,
+        currencyCode: "ILS"
+      },
+      buyLink: "https://play.google.com/store/books/details?id=zIOu07XQmZsC&rdid=book-zIOu07XQmZsC&rdot=1&source=gbs_api",
+      offers: [
+        {
+          finskyOfferType: 1,
+          listPrice: {
+            amountInMicros: 44000000,
+            currencyCode: "ILS"
+          },
+          retailPrice: {
+            amountInMicros: 44000000,
+            currencyCode: "ILS"
+          }
+        }
+      ]
+    },
+    accessInfo: {
+      country: "IL",
+      viewability: "PARTIAL",
+      embeddable: true,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED_FOR_ACCESSIBILITY",
+      epub: {
+        isAvailable: true,
+        acsTokenLink: "http://books.google.com/books/download/Anybody_Out_There-sample-epub.acsm?id=zIOu07XQmZsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      pdf: {
+        isAvailable: false
+      },
+      webReaderLink: "http://play.google.com/books/reader?id=zIOu07XQmZsC&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "SAMPLE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet: "Abouta <b>detective</b>.” I was speechless. Helen claimed—proudly—to be practically <br> illiterate. “I might as well,” she said. “I&#39;ve plenty of material. It&#39;s actually very good, <br> I&#39;ll print it off for you.” The ancient printer screeched andsqueaked forabout ten&nbsp;..."
+    }
+  },
+  {
+    kind: "books#volume",
+    id: "UC8mnQEACAAJ",
+    etag: "Ha3zRb5GUeU",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/UC8mnQEACAAJ",
+    volumeInfo: {
+      title: "Dinner at Antoines",
       authors: [
         "Frances Parkinson Keyes"
       ],
-      publishedDate: "1937",
-      industryIdentifiers: [
-        {
-          type: "OTHER",
-          identifier: "PSU:000004872986"
-        }
-      ],
-      readingModes: {
-        text: false,
-        image: false
-      },
-      pageCount: 201,
-      printType: "BOOK",
-      maturityRating: "NOT_MATURE",
-      allowAnonLogging: false,
-      contentVersion: "1.1.1.0.preview.0",
-      imageLinks: {
-        smallThumbnail: "http://books.google.com/books/content?id=VsfUAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-        thumbnail: "http://books.google.com/books/content?id=VsfUAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      },
-      language: "en",
-      previewLink: "http://books.google.com/books?id=VsfUAAAAMAAJ&q=flowers+inauthor:keyes&dq=flowers+inauthor:keyes&hl=&cd=9&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=VsfUAAAAMAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/Written_in_Heaven.html?hl=&id=VsfUAAAAMAAJ"
-    },
-    saleInfo: {
-      country: "IL",
-      saleability: "NOT_FOR_SALE",
-      isEbook: false
-    },
-    accessInfo: {
-      country: "IL",
-      viewability: "NO_PAGES",
-      embeddable: false,
-      publicDomain: false,
-      textToSpeechPermission: "ALLOWED",
-      epub: {
-        isAvailable: false
-      },
-      pdf: {
-        isAvailable: false
-      },
-      webReaderLink: "http://play.google.com/books/reader?id=VsfUAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
-      accessViewStatus: "NONE",
-      quoteSharingAllowed: false
-    }
-  },
-  {
-    kind: "books#volume",
-    id: "uCqioAEACAAJ",
-    etag: "AzObB522Yo8",
-    selfLink: "https://www.googleapis.com/books/v1/volumes/uCqioAEACAAJ",
-    volumeInfo: {
-      title: "Flowers for Algernon - Downloadable Multiple Critical Perspectives",
-      authors: [
-        "Daniel Keyes"
-      ],
-      publishedDate: "2011-01-01",
-      description: "Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place. Each guide offers clear and concise explanations of three different critical perspectives.",
+      publishedDate: "2013-10-16",
+      description: "Orson Foxworth celebrates his return to New Orleans by giving a dinner in the 1840 room at Antoines restaurant, ostensibly planned to present his niece for the Carnival festivities and to renew his romance with Amelie Lalande. Laland's daughter Odile, accidently spills a red wine down her white dress, a seemingly light incident. However, it is recalled thirty hours later when she is found dead with a strange pistol and an ambiguous note on the floor beside her. Though looking like suicide the plot revolves out of proving otherwise. Infused with much history, customs, and mores of New Orleans of the 1940's. With a new introduction by Patricia Brady setting the history, context of the novel, and with biographical notes on Keyes.",
       industryIdentifiers: [
         {
           type: "ISBN_10",
-          identifier: "1935467972"
+          identifier: "0988962705"
         },
         {
           type: "ISBN_13",
-          identifier: "9781935467977"
+          identifier: "9780988962705"
         }
       ],
       readingModes: {
         text: false,
         image: false
       },
+      pageCount: 464,
       printType: "BOOK",
+      categories: [
+        "Fiction"
+      ],
+      averageRating: 3,
+      ratingsCount: 3,
       maturityRating: "NOT_MATURE",
       allowAnonLogging: false,
       contentVersion: "preview-1.0.0",
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=UC8mnQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=UC8mnQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
       language: "en",
-      previewLink: "http://books.google.com/books?id=uCqioAEACAAJ&dq=flowers+inauthor:keyes&hl=&cd=10&source=gbs_api",
-      infoLink: "http://books.google.com/books?id=uCqioAEACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api",
-      canonicalVolumeLink: "https://books.google.com/books/about/Flowers_for_Algernon_Downloadable_Multip.html?hl=&id=uCqioAEACAAJ"
+      previewLink: "http://books.google.com/books?id=UC8mnQEACAAJ&dq=detectives+inauthor:keyes&hl=&cd=9&source=gbs_api",
+      infoLink: "http://books.google.com/books?id=UC8mnQEACAAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+      canonicalVolumeLink: "https://books.google.com/books/about/Dinner_at_Antoines.html?hl=&id=UC8mnQEACAAJ"
     },
     saleInfo: {
       country: "IL",
@@ -747,12 +1599,87 @@ export const  googleApi ={
       pdf: {
         isAvailable: false
       },
-      webReaderLink: "http://play.google.com/books/reader?id=uCqioAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+      webReaderLink: "http://play.google.com/books/reader?id=UC8mnQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
       accessViewStatus: "NONE",
       quoteSharingAllowed: false
     },
     searchInfo: {
-      textSnippet: "Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place."
+      textSnippet: "Infused with much history, customs, and mores of New Orleans of the 1940&#39;s. With a new introduction by Patricia Brady setting the history, context of the novel, and with biographical notes on Keyes."
+    }
+  },
+  {
+    kind: "books#volume",
+    id: "_aiMAAAAQBAJ",
+    etag: "zxbdCFEPFBM",
+    selfLink: "https://www.googleapis.com/books/v1/volumes/_aiMAAAAQBAJ",
+    volumeInfo: {
+      title: "Gaps",
+      authors: [
+        "Mac Keyes"
+      ],
+      publisher: "Xlibris Corporation",
+      publishedDate: "2007-11-29",
+      description: "When Blake Adams enters a contest set up by a Corporate Mephistopheles who seduces others into his power schemes, he realizes that his obsession with a game of solitaire called Gaps reveals a solution. He travels to Baghdad, Kigali, Manzini, down the Current River, to the resort town of Branson and through the Corporate world with his sexy wife Brooksie and his trusted friend Jonathan, searching for the key to unlock the confusion about family values and the meaning to life. This is a novel about the search for significance and the discovery of authenticity, investigating the nuances of sex, abuse of political power and the contest for spiritual and social values. This romance/mystery offers a poetic love story reserved for mature readers.",
+      industryIdentifiers: [
+        {
+          type: "ISBN_13",
+          identifier: "9781469118369"
+        },
+        {
+          type: "ISBN_10",
+          identifier: "146911836X"
+        }
+      ],
+      readingModes: {
+        text: true,
+        image: true
+      },
+      pageCount: 229,
+      printType: "BOOK",
+      categories: [
+        "Fiction"
+      ],
+      maturityRating: "NOT_MATURE",
+      allowAnonLogging: false,
+      contentVersion: "2.4.4.0.preview.3",
+      panelizationSummary: {
+        containsEpubBubbles: false,
+        containsImageBubbles: false
+      },
+      imageLinks: {
+        smallThumbnail: "http://books.google.com/books/content?id=_aiMAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        thumbnail: "http://books.google.com/books/content?id=_aiMAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      language: "en",
+      previewLink: "http://books.google.com/books?id=_aiMAAAAQBAJ&pg=PA116&dq=detectives+inauthor:keyes&hl=&cd=10&source=gbs_api",
+      infoLink: "http://books.google.com/books?id=_aiMAAAAQBAJ&dq=detectives+inauthor:keyes&hl=&source=gbs_api",
+      canonicalVolumeLink: "https://books.google.com/books/about/Gaps.html?hl=&id=_aiMAAAAQBAJ"
+    },
+    saleInfo: {
+      country: "IL",
+      saleability: "NOT_FOR_SALE",
+      isEbook: false
+    },
+    accessInfo: {
+      country: "IL",
+      viewability: "PARTIAL",
+      embeddable: true,
+      publicDomain: false,
+      textToSpeechPermission: "ALLOWED",
+      epub: {
+        isAvailable: true,
+        acsTokenLink: "http://books.google.com/books/download/Gaps-sample-epub.acsm?id=_aiMAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      pdf: {
+        isAvailable: true,
+        acsTokenLink: "http://books.google.com/books/download/Gaps-sample-pdf.acsm?id=_aiMAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      webReaderLink: "http://play.google.com/books/reader?id=_aiMAAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      accessViewStatus: "SAMPLE",
+      quoteSharingAllowed: false
+    },
+    searchInfo: {
+      textSnippet: "I would like to call <b>detective</b> William Lucas.” Mr. Lucas was not flamboyant by any <br> means—mostly a “just the facts, maam,” kind of guy—and he approached the <br> witness stand with a certain intimidation. “State your name for the record.” “<br> William&nbsp;..."
     }
   }
 ]
