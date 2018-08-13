@@ -169,7 +169,7 @@ body {
     font-size: 17px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .book-details {
         grid-template-columns: 1fr;
     }
@@ -179,7 +179,7 @@ body {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 480px) {
     .vertical-menu li {
         width: 300px;
     }
